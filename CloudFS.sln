@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFS.Authentication", "CloudFS.Authentication\CloudFS.Authentication.csproj", "{F4B1D5E1-04BB-4B01-9079-FC2685E71434}"
 EndProject
@@ -56,6 +56,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFS.InterfaceTests", "C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{20C61427-573E-4493-9DE4-22E7A07CCD88}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		appveyor.yml = appveyor.yml
 		CloudFS.Legacy.nuspec = CloudFS.Legacy.nuspec
 		CloudFS.nuspec = CloudFS.nuspec
@@ -92,6 +93,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignedLibrary", "SignedLibr
 		SignedLibrary\SwiftClient.dll = SignedLibrary\SwiftClient.dll
 		SignedLibrary\YandexDisk.Client.dll = SignedLibrary\YandexDisk.Client.dll
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorgQueen.CloudFS.Interfaces", "CloudFS.Interface\BorgQueen.CloudFS.Interfaces.csproj", "{AF9BE613-A771-4F97-B555-144A2ADCBA05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -219,8 +222,17 @@ Global
 		{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}.Signed|Any CPU.ActiveCfg = Signed|Any CPU
 		{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}.Signed|Any CPU.Build.0 = Signed|Any CPU
+		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Signed|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Signed|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDAF220F-C154-470A-B404-A48BA7408B0B}
 	EndGlobalSection
 EndGlobal
