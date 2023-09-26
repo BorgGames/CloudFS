@@ -29,8 +29,8 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using IgorSoft.CloudFS.Authentication;
 using IgorSoft.CloudFS.GatewayTests.Config;
-using IgorSoft.CloudFS.Interface;
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces;
+using IgorSoft.CloudFS.Interfaces.IO;
 
 namespace IgorSoft.CloudFS.GatewayTests
 {

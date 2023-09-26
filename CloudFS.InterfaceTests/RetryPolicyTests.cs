@@ -25,7 +25,7 @@ SOFTWARE.
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IgorSoft.CloudFS.InterfaceTests

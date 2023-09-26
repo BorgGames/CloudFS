@@ -28,9 +28,10 @@ using System.Composition;
 using System.Composition.Hosting;
 using System.IO;
 using System.Threading.Tasks;
-using IgorSoft.CloudFS.Interface;
-using IgorSoft.CloudFS.Interface.Composition;
-using IgorSoft.CloudFS.Interface.IO;
+
+using IgorSoft.CloudFS.Interfaces;
+using IgorSoft.CloudFS.Interfaces.Composition;
+using IgorSoft.CloudFS.Interfaces.IO;
 
 namespace IgorSoft.CloudFS.InterfaceTests.Composition
 {
@@ -44,7 +45,7 @@ namespace IgorSoft.CloudFS.InterfaceTests.Composition
                 throw new NotImplementedException();
             }
 
-            public Task<FileSystemInfoContract> CopyItemAsync(RootName root, FileSystemId source, string copyName, DirectoryId destination, bool recurse)
+            public Task<FileSystemInfoContract> CopyItemAsync(RootName root, FileSystemId source, string copyName, DirectoryId destination, bool recurse, bool replace)
             {
                 throw new NotImplementedException();
             }
@@ -69,7 +70,7 @@ namespace IgorSoft.CloudFS.InterfaceTests.Composition
                 throw new NotImplementedException();
             }
 
-            public Task<FileSystemInfoContract> MoveItemAsync(RootName root, FileSystemId source, string moveName, DirectoryId destination, Func<FileSystemInfoLocator> locatorResolver)
+            public Task<FileSystemInfoContract> MoveItemAsync(RootName root, FileSystemId source, string moveName, DirectoryId destination, bool replace, Func<FileSystemInfoLocator> locatorResolver)
             {
                 throw new NotImplementedException();
             }

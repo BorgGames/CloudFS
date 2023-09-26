@@ -34,9 +34,9 @@ using Polly;
 using Microsoft.Graph;
 using Microsoft.OneDrive.Sdk;
 using Microsoft.OneDrive.Sdk.Helpers;
-using IgorSoft.CloudFS.Interface;
-using IgorSoft.CloudFS.Interface.Composition;
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces;
+using IgorSoft.CloudFS.Interfaces.Composition;
+using IgorSoft.CloudFS.Interfaces.IO;
 using IgorSoft.CloudFS.Gateways.OneDrive.OAuth;
 
 namespace IgorSoft.CloudFS.Gateways.OneDrive

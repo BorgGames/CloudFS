@@ -26,7 +26,7 @@ using System;
 using System.Globalization;
 using System.IO;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     /// <summary>
     /// The descriptor of a cloud directory.

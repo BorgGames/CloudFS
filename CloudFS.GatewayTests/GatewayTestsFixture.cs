@@ -33,9 +33,9 @@ using System.Threading.Tasks;
 using LazyCache;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using IgorSoft.AppDomainResolver;
-using IgorSoft.CloudFS.Interface;
-using IgorSoft.CloudFS.Interface.Composition;
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces;
+using IgorSoft.CloudFS.Interfaces.Composition;
+using IgorSoft.CloudFS.Interfaces.IO;
 using IgorSoft.CloudFS.GatewayTests.Config;
 
 namespace IgorSoft.CloudFS.GatewayTests

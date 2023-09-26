@@ -27,7 +27,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Moq;
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces.IO;
 
 namespace IgorSoft.CloudFS.InterfaceTests.IO
 {

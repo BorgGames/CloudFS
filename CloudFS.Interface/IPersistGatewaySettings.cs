@@ -24,7 +24,7 @@ SOFTWARE.
 
 using System;
 
-namespace IgorSoft.CloudFS.Interface
+namespace IgorSoft.CloudFS.Interfaces
 {
     /// <summary>
     /// Provides management of persisted cloud file system gateway settings.

@@ -23,7 +23,7 @@ SOFTWARE.
 */
 
 using System;
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces.IO;
 
 namespace IgorSoft.CloudFS.GatewayTests
 {

@@ -28,8 +28,9 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces.IO;
 using Polly;
+using Polly.Retry;
 
 namespace IgorSoft.CloudFS.InterfaceTests
 {
@@ -68,7 +69,7 @@ namespace IgorSoft.CloudFS.InterfaceTests
                 return streamFactory.Dequeue();
             }
 
-            public Policy GetWaitAndRetryPolicy(Action<Exception, TimeSpan> retryAction)
+            public AsyncRetryPolicy GetWaitAndRetryPolicy(Action<Exception, TimeSpan> retryAction)
             {
                 return Policy.Handle<IOException>().WaitAndRetryAsync(5, retryAttempt => TimeSpan.FromMilliseconds(5), retryAction);
             }

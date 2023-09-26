@@ -28,8 +28,8 @@ using System.IO;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using IgorSoft.CloudFS.Authentication;
-using IgorSoft.CloudFS.Interface;
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces;
+using IgorSoft.CloudFS.Interfaces.IO;
 using IgorSoft.CloudFS.GatewayTests.Config;
 
 namespace IgorSoft.CloudFS.GatewayTests

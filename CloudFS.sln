@@ -52,8 +52,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFS.GatewayTests", "Clo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFS.Interface", "CloudFS.Interface\CloudFS.Interface.csproj", "{3C92BDC3-AE94-4269-8FC6-9114A90184AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudFS.InterfaceTests", "CloudFS.InterfaceTests\CloudFS.InterfaceTests.csproj", "{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{20C61427-573E-4493-9DE4-22E7A07CCD88}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -95,6 +93,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignedLibrary", "SignedLibr
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorgQueen.CloudFS.Interfaces", "CloudFS.Interface\BorgQueen.CloudFS.Interfaces.csproj", "{AF9BE613-A771-4F97-B555-144A2ADCBA05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorgQueen.CloudFS.InterfaceTests", "CloudFS.InterfaceTests\BorgQueen.CloudFS.InterfaceTests.csproj", "{D3EF17F2-FFF5-43C7-86BE-9EEFF4DD9D18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -216,18 +216,18 @@ Global
 		{3C92BDC3-AE94-4269-8FC6-9114A90184AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3C92BDC3-AE94-4269-8FC6-9114A90184AC}.Signed|Any CPU.ActiveCfg = Signed|Any CPU
 		{3C92BDC3-AE94-4269-8FC6-9114A90184AC}.Signed|Any CPU.Build.0 = Signed|Any CPU
-		{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}.Signed|Any CPU.ActiveCfg = Signed|Any CPU
-		{AFAE0CF4-8128-4F8E-BD25-0411ECCD4511}.Signed|Any CPU.Build.0 = Signed|Any CPU
 		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Signed|Any CPU.ActiveCfg = Debug|Any CPU
 		{AF9BE613-A771-4F97-B555-144A2ADCBA05}.Signed|Any CPU.Build.0 = Debug|Any CPU
+		{D3EF17F2-FFF5-43C7-86BE-9EEFF4DD9D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EF17F2-FFF5-43C7-86BE-9EEFF4DD9D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EF17F2-FFF5-43C7-86BE-9EEFF4DD9D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EF17F2-FFF5-43C7-86BE-9EEFF4DD9D18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3EF17F2-FFF5-43C7-86BE-9EEFF4DD9D18}.Signed|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EF17F2-FFF5-43C7-86BE-9EEFF4DD9D18}.Signed|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

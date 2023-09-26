@@ -25,7 +25,7 @@ SOFTWARE.
 using System;
 using System.Globalization;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     /// <summary>
     /// An association of a file system object ID with its name.

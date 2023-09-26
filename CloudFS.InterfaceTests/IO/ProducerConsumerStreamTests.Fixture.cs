@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces.IO;
 
 namespace IgorSoft.CloudFS.InterfaceTests.IO
 {

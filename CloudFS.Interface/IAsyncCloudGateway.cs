@@ -26,9 +26,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using IgorSoft.CloudFS.Interface.IO;
 
-namespace IgorSoft.CloudFS.Interface.Composition
+using IgorSoft.CloudFS.Interfaces.IO;
+
+namespace IgorSoft.CloudFS.Interfaces
 {
     /// <summary>
     /// An asynchronous gateway to a cloud file system.
@@ -110,9 +111,15 @@ namespace IgorSoft.CloudFS.Interface.Composition
         /// <param name="copyName">The name of the copy.</param>
         /// <param name="destination">The destination directory ID.</param>
         /// <param name="recurse">if set to <c>true</c>, copies child items recursively.</param>
+        /// <param name="replace">Unless set to <c>true</c>, a <see cref="DestinationAlreadyExistsException"/> will always be thrown if an item with name <paramref name="copyName"/> already exists in <paramref name="destination"/>.</param>
         /// <returns>A <see cref="Task{FileSystemInfoContract}"/> representing the copied cloud file system object.</returns>
-        /// <remarks>A file system object cannot be copied to a different cloud drive.</remarks>
-        Task<FileSystemInfoContract> CopyItemAsync(RootName root, FileSystemId source, string copyName, DirectoryId destination, bool recurse);
+        /// <remarks>A file system object cannot be copied to a different cloud drive.
+        /// <para>
+        /// Even when <paramref name="replace"/> is set to <c>true</c>, the implementation may still throw a <see cref="DestinationAlreadyExistsException"/> if the cloud service does not support overwriting existing items.
+        /// </para>
+        /// </remarks>
+        /// <exception cref="DestinationAlreadyExistsException">The item with <paramref name="copyName"/> already exists in <paramref name="destination"/>.</exception>
+        Task<FileSystemInfoContract> CopyItemAsync(RootName root, FileSystemId source, string copyName, DirectoryId destination, bool recurse, bool replace);
 
         /// <summary>
         /// Moves and optionally renames the specified cloud file system object to the specified destination directory asynchronously.
@@ -121,10 +128,16 @@ namespace IgorSoft.CloudFS.Interface.Composition
         /// <param name="source">The source file system object ID.</param>
         /// <param name="moveName">The name of the moved file system object.</param>
         /// <param name="destination">The destination directory ID.</param>
+        /// /// <param name="replace">Unless set to <c>true</c>, a <see cref="DestinationAlreadyExistsException"/> will always be thrown if an item with name <paramref name="moveName"/> already exists in <paramref name="destination"/>.</param>
         /// <param name="locatorResolver">Provides a <see cref="FileSystemInfoLocator"/> instance.</param>
         /// <returns>A <see cref="Task{FileSystemInfoContract}"/> representing the moved cloud file system object.</returns>
-        /// <remarks>A file system object cannot be moved to a different cloud drive.</remarks>
-        Task<FileSystemInfoContract> MoveItemAsync(RootName root, FileSystemId source, string moveName, DirectoryId destination, Func<FileSystemInfoLocator> locatorResolver);
+        /// <remarks>A file system object cannot be moved to a different cloud drive.
+        /// <para>
+        /// Even when <paramref name="replace"/> is set to <c>true</c>, the implementation may still throw a <see cref="DestinationAlreadyExistsException"/> if the cloud service does not support overwriting existing items.
+        /// </para>
+        /// </remarks>
+        /// /// <exception cref="DestinationAlreadyExistsException">The item with <paramref name="moveName"/> already exists in <paramref name="destination"/>.</exception>
+        Task<FileSystemInfoContract> MoveItemAsync(RootName root, FileSystemId source, string moveName, DirectoryId destination, bool replace, Func<FileSystemInfoLocator> locatorResolver);
 
         /// <summary>
         /// Creates a new cloud directory asynchronously.

@@ -24,7 +24,7 @@ SOFTWARE.
 
 using System;
 
-namespace IgorSoft.CloudFS.Interface
+namespace IgorSoft.CloudFS.Interfaces
 {
     /// <summary>
     /// Capabilities supported by a cloud service.

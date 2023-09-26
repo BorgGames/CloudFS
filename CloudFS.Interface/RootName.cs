@@ -29,7 +29,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using SemanticTypes;
 
-namespace IgorSoft.CloudFS.Interface
+namespace IgorSoft.CloudFS.Interfaces
 {
     /// <summary>
     /// The root of a cloud file system.

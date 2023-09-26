@@ -24,7 +24,7 @@ SOFTWARE.
 
 using System;
 
-namespace IgorSoft.CloudFS.Interface.Composition
+namespace IgorSoft.CloudFS.Interfaces.Composition
 {
     /// <summary>
     /// Declares export contracts for MEF composition.

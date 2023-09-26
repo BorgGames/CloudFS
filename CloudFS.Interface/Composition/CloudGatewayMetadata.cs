@@ -28,7 +28,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace IgorSoft.CloudFS.Interface.Composition
+namespace IgorSoft.CloudFS.Interfaces.Composition
 {
     /// <summary>
     /// Describes a cloud service.

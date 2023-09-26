@@ -27,7 +27,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     /// <summary>
     /// A stream with integrated progress reporting.

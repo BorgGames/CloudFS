@@ -1,11 +1,11 @@
 # CloudFS
 The **CloudFS** library is a collection of .NET assemblies as gateways to various publicly accessible Cloud storage services.
 
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/viciousviper/CloudFS/blob/master/LICENSE.md)
-[![Release](https://img.shields.io/github/tag/viciousviper/CloudFS.svg)](https://github.com/viciousviper/CloudFS/releases)
-[![Version](https://img.shields.io/nuget/v/CloudFS.svg)](https://www.nuget.org/packages/CloudFS)
-[![NuGet downloads](https://img.shields.io/nuget/dt/CloudFS.svg)](https://www.nuget.org/packages/CloudFS)
-[![NuGet downloads (signed)](https://img.shields.io/nuget/dt/CloudFS-Signed.svg)](https://www.nuget.org/packages/CloudFS-Signed)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/BorgGames/CloudFS/blob/master/LICENSE.md)
+[![Release](https://img.shields.io/github/tag/BorgGames/CloudFS.svg)](https://github.com/BorgGames/CloudFS/releases)
+[![Version](https://img.shields.io/nuget/v/BorgQueen.CloudFS.Interfaces.svg)](https://www.nuget.org/packages/BorgQueen.CloudFS.Interfaces)
+[![NuGet downloads](https://img.shields.io/nuget/dt/BorgQueen.CloudFS.Interfaces.svg)](https://www.nuget.org/packages/BorgQueen.CloudFS.Interfaces)
+[![NuGet downloads (signed)](https://img.shields.io/nuget/dt/BorgQueen.CloudFS.Interfaces.svg)](https://www.nuget.org/packages/BorgQueen.CloudFS.Interfaces)
 
 | Branch  | Build status | Code coverage | Code analysis | Quality gate |
 | :------ | :----------: | :-----------: | :-----------: | :----------: |

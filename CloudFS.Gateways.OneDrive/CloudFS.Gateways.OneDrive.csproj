@@ -128,9 +128,9 @@
       <Project>{f4b1d5e1-04bb-4b01-9079-fc2685e71434}</Project>
       <Name>CloudFS.Authentication</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CloudFS.Interface\CloudFS.Interface.csproj">
-      <Project>{3c92bdc3-ae94-4269-8fc6-9114a90184ac}</Project>
-      <Name>CloudFS.Interface</Name>
+    <ProjectReference Include="..\CloudFS.Interface\BorgQueen.CloudFS.Interfaces.csproj">
+      <Project>{af9be613-a771-4f97-b555-144a2adcba05}</Project>
+      <Name>BorgQueen.CloudFS.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

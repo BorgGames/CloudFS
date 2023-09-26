@@ -25,12 +25,12 @@ SOFTWARE.
 using System;
 using System.Globalization;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     /// <summary>
     /// The unique identifier of a cloud file.
     /// </summary>
-    /// <seealso cref="IgorSoft.CloudFS.Interface.IO.FileSystemId" />
+    /// <seealso cref="IgorSoft.CloudFS.Interfaces.IO.FileSystemId" />
     [System.Diagnostics.DebuggerDisplay("{DebuggerDisplay(),nq}")]
     public sealed class FileId : FileSystemId
     {

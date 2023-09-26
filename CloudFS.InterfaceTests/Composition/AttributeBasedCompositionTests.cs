@@ -24,7 +24,7 @@ SOFTWARE.
 
 using System;
 using System.Collections.Generic;
-using IgorSoft.CloudFS.Interface.Composition;
+using IgorSoft.CloudFS.Interfaces.Composition;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IgorSoft.CloudFS.InterfaceTests.Composition

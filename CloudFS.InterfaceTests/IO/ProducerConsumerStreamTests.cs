@@ -27,7 +27,7 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using IgorSoft.CloudFS.Interface.IO;
+using IgorSoft.CloudFS.Interfaces.IO;
 using IgorSoft.CloudFS.InterfaceTests;
 
 namespace IgorSoft.CloudFS.InterfaceTests.IO

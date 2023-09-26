@@ -24,7 +24,7 @@ SOFTWARE.
 
 using System;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     /// <summary>
     /// The descriptor of a cloud file system object.

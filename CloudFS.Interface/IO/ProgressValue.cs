@@ -25,7 +25,7 @@ SOFTWARE.
 using System;
 using System.Globalization;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     /// <summary>
     /// A progress update value.

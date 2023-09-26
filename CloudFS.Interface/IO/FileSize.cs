@@ -29,7 +29,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using SemanticTypes;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     /// <summary>
     /// The size of a file in bytes.

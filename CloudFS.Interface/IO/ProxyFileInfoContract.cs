@@ -25,7 +25,7 @@ SOFTWARE.
 using System;
 using System.Globalization;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     /// <summary>
     /// The placeholder for a cloud file that is being initialized.

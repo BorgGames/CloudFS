@@ -28,7 +28,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     public sealed class ProducerConsumerStream : Stream
     {

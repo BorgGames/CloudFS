@@ -26,7 +26,7 @@ using System;
 using System.Composition;
 using System.Globalization;
 
-namespace IgorSoft.CloudFS.Interface.Composition
+namespace IgorSoft.CloudFS.Interfaces.Composition
 {
     /// <summary>
     /// Exports an <see cref="ICloudGateway"/> for MEF-composition.

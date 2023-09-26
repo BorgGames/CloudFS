@@ -84,8 +84,10 @@
     <Compile Include="Composition\CloudGatewayMetadata.cs" />
     <Compile Include="Composition\ExportContracts.cs" />
     <Compile Include="GatewayCapabilities.cs" />
-    <Compile Include="Composition\IAsyncCloudGateway.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IAsyncCloudGateway.cs" />
+    <Compile Include="ICloudGateway.cs" />
+    <Compile Include="IO\DestinationAlreadyExistsException.cs" />
     <Compile Include="IO\DirectoryId.cs" />
     <Compile Include="IO\DriveId.cs" />
     <Compile Include="IO\FileId.cs" />
@@ -100,7 +102,6 @@
     <Compile Include="IO\FileInfoContract.cs" />
     <Compile Include="IO\FileSystemInfoContract.cs" />
     <Compile Include="IO\DirectoryInfoContract.cs" />
-    <Compile Include="Composition\ICloudGateway.cs" />
     <Compile Include="IO\ProgressValue.cs" />
     <Compile Include="IPersistGatewaySettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -25,9 +25,11 @@ SOFTWARE.
 using System;
 using System.Collections.Generic;
 using System.IO;
-using IgorSoft.CloudFS.Interface.IO;
 
-namespace IgorSoft.CloudFS.Interface.Composition
+using IgorSoft.CloudFS.Interfaces;
+using IgorSoft.CloudFS.Interfaces.IO;
+
+namespace IgorSoft.CloudFS.Interfaces
 {
     /// <summary>
     /// A synchronous gateway to a cloud file system.

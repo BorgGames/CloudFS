@@ -25,7 +25,7 @@ SOFTWARE.
 using System;
 using SemanticTypes;
 
-namespace IgorSoft.CloudFS.Interface.IO
+namespace IgorSoft.CloudFS.Interfaces.IO
 {
     /// <summary>
     /// The unique identifier of a cloud file system object.
