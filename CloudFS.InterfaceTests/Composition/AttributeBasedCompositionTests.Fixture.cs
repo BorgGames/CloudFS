@@ -40,70 +40,72 @@ namespace IgorSoft.CloudFS.InterfaceTests.Composition
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
         public abstract class AsyncCloudGatewayBase : IAsyncCloudGateway
         {
-            public Task<bool> ClearContentAsync(RootName root, FileId target, Func<FileSystemInfoLocator> locatorResolver)
+            public Task<bool> ClearContentAsync(RootName root, FileId target, Func<FileSystemInfoLocator> locatorResolver, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<FileSystemInfoContract> CopyItemAsync(RootName root, FileSystemId source, string copyName, DirectoryId destination, bool recurse, bool replace)
+            public Task<FileSystemInfoContract> CopyItemAsync(RootName root, FileSystemId source, string copyName, DirectoryId destination, bool recurse, bool replace, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<IEnumerable<FileSystemInfoContract>> GetChildItemAsync(RootName root, DirectoryId parent)
+            public Task<IEnumerable<FileSystemInfoContract>> GetChildItemAsync(RootName root, DirectoryId parent, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<Stream> GetContentAsync(RootName root, FileId source)
+            public Task<Stream> GetContentAsync(RootName root, FileId source, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<DriveInfoContract> GetDriveAsync(RootName root, string apiKey, IDictionary<string, string> parameters)
+            public Task<DriveInfoContract> GetDriveAsync(RootName root, string apiKey, IDictionary<string, string> parameters, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<RootDirectoryInfoContract> GetRootAsync(RootName root, string apiKey, IDictionary<string, string> parameters)
+            public Task<RootDirectoryInfoContract> GetRootAsync(RootName root, string apiKey, IDictionary<string, string> parameters, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<FileSystemInfoContract> MoveItemAsync(RootName root, FileSystemId source, string moveName, DirectoryId destination, bool replace, Func<FileSystemInfoLocator> locatorResolver)
+            public Task<FileSystemInfoContract> MoveItemAsync(RootName root, FileSystemId source, string moveName, DirectoryId destination, bool replace, Func<FileSystemInfoLocator> locatorResolver, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<DirectoryInfoContract> NewDirectoryItemAsync(RootName root, DirectoryId parent, string name)
+            public Task<DirectoryInfoContract> NewDirectoryItemAsync(RootName root, DirectoryId parent, string name, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<FileInfoContract> NewFileItemAsync(RootName root, DirectoryId parent, string name, Stream content, IProgress<ProgressValue> progress)
+            public Task<FileInfoContract> NewFileItemAsync(RootName root, DirectoryId parent, string name, Stream content, IProgress<ProgressValue> progress, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<bool> RemoveItemAsync(RootName root, FileSystemId target, bool recurse)
+            public Task<bool> RemoveItemAsync(RootName root, FileSystemId target, bool recurse, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<FileSystemInfoContract> RenameItemAsync(RootName root, FileSystemId target, string newName, Func<FileSystemInfoLocator> locatorResolver)
+            public Task<FileSystemInfoContract> RenameItemAsync(RootName root, FileSystemId target, string newName, Func<FileSystemInfoLocator> locatorResolver, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<bool> SetContentAsync(RootName root, FileId target, Stream content, IProgress<ProgressValue> progress, Func<FileSystemInfoLocator> locatorResolver)
+            public Task<bool> SetContentAsync(RootName root, FileId target, Stream content, IProgress<ProgressValue> progress, Func<FileSystemInfoLocator> locatorResolver, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
 
-            public Task<bool> TryAuthenticateAsync(RootName root, string apiKey, IDictionary<string, string> parameters)
+            public Task<bool> TryAuthenticateAsync(RootName root, string apiKey, IDictionary<string, string> parameters, CancellationToken cancel = default)
             {
                 throw new NotImplementedException();
             }
+
+            public bool SupportsCancellation => false;
         }
 
         [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]

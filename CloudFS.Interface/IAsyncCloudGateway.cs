@@ -25,6 +25,7 @@ SOFTWARE.
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 
 using IgorSoft.CloudFS.Interfaces.IO;
@@ -44,7 +45,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="parameters">Additional parameters for drive configuration.</param>
         /// <returns>A <see cref="Task{bool}"/> representing the authentication result: <c>true</c> if the authentication succeeded; otherwise <c>false</c>.</returns>
         /// <remarks>If no <paramref name="apiKey"/> is specified, this method will load a stored authentication token, if present, or else prompt the user for credentials.</remarks>
-        Task<bool> TryAuthenticateAsync(RootName root, string apiKey, IDictionary<string, string> parameters);
+        Task<bool> TryAuthenticateAsync(RootName root, string apiKey, IDictionary<string, string> parameters, CancellationToken cancel = default);
 
         /// <summary>
         /// Gets the drive associated with a cloud file system asynchronously.
@@ -54,7 +55,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="parameters">Additional parameters for drive configuration.</param>
         /// <returns>A <see cref="Task{DriveInfoContract}"/> representing the drive.</returns>
         /// <remarks>If no <paramref name="apiKey"/> is specified, this method will load a stored authentication token, if present, or else prompt the user for credentials.</remarks>
-        Task<DriveInfoContract> GetDriveAsync(RootName root, string apiKey, IDictionary<string, string> parameters);
+        Task<DriveInfoContract> GetDriveAsync(RootName root, string apiKey, IDictionary<string, string> parameters, CancellationToken cancel = default);
 
         /// <summary>
         /// Gets the root directory asynchronously.
@@ -64,7 +65,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="parameters">Additional parameters for drive configuration.</param>
         /// <returns>A <see cref="Task{RootDirectoryInfoContract}"/> representing the root directory.</returns>
         /// <remarks>If no <paramref name="apiKey"/> is specified, this method will load a stored authentication token, if present, or else prompt the user for credentials.</remarks>
-        Task<RootDirectoryInfoContract> GetRootAsync(RootName root, string apiKey, IDictionary<string, string> parameters);
+        Task<RootDirectoryInfoContract> GetRootAsync(RootName root, string apiKey, IDictionary<string, string> parameters, CancellationToken cancel = default);
 
         /// <summary>
         /// Gets the child items of the specified parent directory asynchronously.
@@ -73,7 +74,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="parent">The parent directory info.</param>
         /// <returns>An enumeration of <see cref="Task{IEnumerable<FileSystemInfoContract>}"/> representing the child items.</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
-        Task<IEnumerable<FileSystemInfoContract>> GetChildItemAsync(RootName root, DirectoryId parent);
+        Task<IEnumerable<FileSystemInfoContract>> GetChildItemAsync(RootName root, DirectoryId parent, CancellationToken cancel = default);
 
         /// <summary>
         /// Clears the content of the specified file asynchronously.
@@ -82,7 +83,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="target">The target file ID.</param>
         /// <param name="locatorResolver">Provides a <see cref="FileSystemInfoLocator"/> instance.</param>
         /// <returns>A <see cref="Task{bool}"/> representing the operation result.</returns>
-        Task<bool> ClearContentAsync(RootName root, FileId target, Func<FileSystemInfoLocator> locatorResolver);
+        Task<bool> ClearContentAsync(RootName root, FileId target, Func<FileSystemInfoLocator> locatorResolver, CancellationToken cancel = default);
 
         /// <summary>
         /// Creates a read-only <see cref="Stream"/> object for the the content of the specified file asynchronously.
@@ -90,7 +91,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="root">The root name identifying a cloud file system instance.</param>
         /// <param name="source">The source file ID.</param>
         /// <returns>A <see cref="Task"/> representing a read-only <see cref="Stream"/> object for the the content of the specified file.</returns>
-        Task<Stream> GetContentAsync(RootName root, FileId source);
+        Task<Stream> GetContentAsync(RootName root, FileId source, CancellationToken cancel = default);
 
         /// <summary>
         /// Sets the content of the specified file from the specified <see cref="Stream" /> asynchronously.
@@ -101,7 +102,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="progress">A provider for progress updates.</param>
         /// <param name="locatorResolver">Provides a <see cref="FileSystemInfoLocator"/> instance.</param>
         /// <returns>A <see cref="Task{bool}"/> representing the operation result.</returns>
-        Task<bool> SetContentAsync(RootName root, FileId target, Stream content, IProgress<ProgressValue> progress, Func<FileSystemInfoLocator> locatorResolver);
+        Task<bool> SetContentAsync(RootName root, FileId target, Stream content, IProgress<ProgressValue> progress, Func<FileSystemInfoLocator> locatorResolver, CancellationToken cancel = default);
 
         /// <summary>
         /// Copies and optionally renames the specified cloud file system object to the specified destination directory asynchronously.
@@ -119,7 +120,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// </para>
         /// </remarks>
         /// <exception cref="DestinationAlreadyExistsException">The item with <paramref name="copyName"/> already exists in <paramref name="destination"/>.</exception>
-        Task<FileSystemInfoContract> CopyItemAsync(RootName root, FileSystemId source, string copyName, DirectoryId destination, bool recurse, bool replace);
+        Task<FileSystemInfoContract> CopyItemAsync(RootName root, FileSystemId source, string copyName, DirectoryId destination, bool recurse, bool replace, CancellationToken cancel = default);
 
         /// <summary>
         /// Moves and optionally renames the specified cloud file system object to the specified destination directory asynchronously.
@@ -137,7 +138,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// </para>
         /// </remarks>
         /// /// <exception cref="DestinationAlreadyExistsException">The item with <paramref name="moveName"/> already exists in <paramref name="destination"/>.</exception>
-        Task<FileSystemInfoContract> MoveItemAsync(RootName root, FileSystemId source, string moveName, DirectoryId destination, bool replace, Func<FileSystemInfoLocator> locatorResolver);
+        Task<FileSystemInfoContract> MoveItemAsync(RootName root, FileSystemId source, string moveName, DirectoryId destination, bool replace, Func<FileSystemInfoLocator> locatorResolver, CancellationToken cancel = default);
 
         /// <summary>
         /// Creates a new cloud directory asynchronously.
@@ -146,7 +147,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="parent">The parent directory ID.</param>
         /// <param name="name">The name.</param>
         /// <returns>A <see cref="Task{DirectoryInfoContract}"/> representing the new directory.</returns>
-        Task<DirectoryInfoContract> NewDirectoryItemAsync(RootName root, DirectoryId parent, string name);
+        Task<DirectoryInfoContract> NewDirectoryItemAsync(RootName root, DirectoryId parent, string name, CancellationToken cancel = default);
 
         /// <summary>
         /// Creates a new cloud file asynchronously.
@@ -157,7 +158,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="content">A <see cref="Stream"/> object providing the content.</param>
         /// <param name="progress">A provider for progress updates.</param>
         /// <returns>A <see cref="Task{FileInfoContract}"/> representing the new file.</returns>
-        Task<FileInfoContract> NewFileItemAsync(RootName root, DirectoryId parent, string name, Stream content, IProgress<ProgressValue> progress);
+        Task<FileInfoContract> NewFileItemAsync(RootName root, DirectoryId parent, string name, Stream content, IProgress<ProgressValue> progress, CancellationToken cancel = default);
 
         /// <summary>
         /// Removes the specified cloud file system object asynchronously.
@@ -166,7 +167,7 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="target">The target file system object ID.</param>
         /// <param name="recurse">if set to <c>true</c>, removes a non-empty directory with its child items recursively.</param>
         /// <returns>A <see cref="Task{bool}"/> representing the operation result.</returns>
-        Task<bool> RemoveItemAsync(RootName root, FileSystemId target, bool recurse);
+        Task<bool> RemoveItemAsync(RootName root, FileSystemId target, bool recurse, CancellationToken cancel = default);
 
         /// <summary>
         /// Renames the specified cloud file system object asynchronously.
@@ -176,6 +177,11 @@ namespace IgorSoft.CloudFS.Interfaces
         /// <param name="newName">The new name.</param>
         /// <param name="locatorResolver">Provides a <see cref="FileSystemInfoLocator"/> instance.</param>
         /// <returns>A <see cref="Task{FileSystemInfoContract}"/> representing the renamed file system object.</returns>
-        Task<FileSystemInfoContract> RenameItemAsync(RootName root, FileSystemId target, string newName, Func<FileSystemInfoLocator> locatorResolver);
+        Task<FileSystemInfoContract> RenameItemAsync(RootName root, FileSystemId target, string newName, Func<FileSystemInfoLocator> locatorResolver, CancellationToken cancel = default);
+
+        /// <summary>
+        /// If <c>false</c>, the calls might ignore cancellation tokens.
+        /// </summary>
+        bool SupportsCancellation { get; }
     }
 }

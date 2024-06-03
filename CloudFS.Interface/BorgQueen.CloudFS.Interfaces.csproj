@@ -6,7 +6,7 @@
     <RootNamespace>IgorSoft.CloudFS.Interfaces</RootNamespace>
 
     <!-- Package stuff -->
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
 
